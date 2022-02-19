@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>ToDo</title>
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="main.js"></script>
+</head>
+<body>
+
+<div id="theme-toggler" class="fas fa-moon"></div>
+    
+    <h1 class="title">today I will</h1>
+
+    <div class="all-tasks">
+        <h2 class="task-list-title">Lists</h2>
+        <ul class="task-list" data-lists></ul>
+
+        <form action="" data-new-list-form>
+            <input type="text" 
+            class="new list"
+            data-new-list-input
+            placeholder="add new list"
+            aria-label="new list name"
+            >
+            <button class="btn create"
+            aria-label="create new list">+</button>
+        </form>
+    </div>
+
+    <div class="todo-list" data-list-display-container>
+        <div class="todo-header">
+            <h2 class="list-title" data-list-title>🔼 create new list</h2>
+            <p class="task-count" data-list-count>0 tasks remaining</p>
+        </div>
+        <div class="todo-body">
+            <div class="tasks" data-tasks> </div> 
+
+            <div class="new-task-creator" data-new-task-form>
+                <form action="">
+                    <input type="text" 
+                    data-new-task-input
+                    class="new task"
+                    placeholder="add new task"
+                    aria-label="new task name"
+                    >
+                    <button class="btn create"
+                    aria-label="create new task">+</button>
+                </form>
+            </div>
+            <div class="delete">
+                <button class="btn delete" clear-complete-tasks-button>Clear Completed Tasks</button>
+                <button class="btn delete" data-delete-list-button>Delete list</button>
+            </div>
+        </div>
+    </div>
+    <template id="task-template">
+        <div class="task">
+            <input type="checkbox">
+            <label><span class="custom-checkbox"></span></label>
+        </div>
+    </template>
+</body>
+</html>
